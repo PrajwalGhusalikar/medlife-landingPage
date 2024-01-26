@@ -620,3 +620,15 @@ video {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
+
+/* Your custom styles */
+.shadow-custom {
+  box-shadow: 0 10px 50px -15px rgba(0, 0, 0, 0.5); /* Adjust the alpha value for a darker shadow */
+}
+.shadow-custom:hover {
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.5); /* Adjust the alpha value for a darker shadow */
+ 
+
+}
+
+
