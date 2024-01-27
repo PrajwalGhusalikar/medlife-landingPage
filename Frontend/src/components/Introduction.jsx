@@ -20,7 +20,7 @@ const Introduction = () => {
             </p>
           </div>
           <div
-            className="text-lg w-80 h-20 bg-green-500 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150  "
+            className="text-lg w-80 h-20 bg-green-500 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150 cursor-pointer   "
             style={{
               background:
                 "linear-gradient(to bottom right, #64deb2 0%, #b1f9d8 100%)",
