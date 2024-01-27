@@ -6,9 +6,9 @@ import security from "../assets/security.svg";
 import uiux from "../assets/uiux.svg";
 const Features = () => {
   return (
-    <div>
-      <div className="w-screen text-center text-3xl py-1">Features</div>
-      <div className="sm:w-11/12 mx-auto my-8 md:gap-3  grid sm:grid-cols-2 md:grid-cols-3 place-items-center">
+    <div name="features">
+      <div className="w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0">Features</div>
+      <div className="sm:w-11/12 mx-auto my-8 mt-6 md:gap-3  grid sm:grid-cols-2 md:grid-cols-3 place-items-center">
         <div className="w-72 h-48  bg-emerald-50 p-2  m-2 rounded shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110  hover:bg-emerald-100  duration-150 z-10 ">
           <div className="text-lg m-2 flex items-center ">
             <span className="font-bold mx-2">Instant Feedback</span>{" "}
