@@ -8,7 +8,7 @@ const Footer = () => {
         className="w-screen mt-4 flex flex-col sm:flex-row justify-between sm:items-center p-4"
  
       >
-        <div className="w-60  flex text-white">
+        <div className="w-60  flex text-white hover:cursor-pointer">
           <img src={Logo} alt="" className="h-16 w-16" />
           <div className="w-40">
             <h2 className="text-xl ">medlife.ai</h2>
@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Pre-sale FAQ’s</div>
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Services</div>
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">About Us</div>
-          <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Submit a Ticket</div>
+          <div className="text-sm  text-white mx-2 sm:w-28 hover:cursor-pointer hover:underline hover:font-semibold">Submit a Ticket</div>
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Support</div>
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Contact</div>
           <div className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold">Affiliates</div>
