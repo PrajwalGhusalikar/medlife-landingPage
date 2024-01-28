@@ -1,8 +1,8 @@
 import React from "react";
 import sideImg from "../assets/sideimage.png";
-import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
+import { easeInOut, easeOut, motion } from "framer-motion";
 import { Link } from "react-scroll";
-const Introduction = () => {
+const Home = () => {
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeInUp = {
     initial: {
@@ -13,12 +13,11 @@ const Introduction = () => {
         ease: easing,
       },
     },
-
     animate: {
       y: 5,
       opacity: 1,
       transition: {
-        duration:2,
+        duration: 2,
         ease: easing,
       },
     },
@@ -32,13 +31,20 @@ const Introduction = () => {
       },
     },
   };
+
   return (
-    <motion.div variants={stagger} initial="initial"  animate="animate" name="home">
+    <motion.div
+      variants={stagger}
+      initial="initial"
+      animate="animate"
+      name="home"
+      className="h-screen flex flex-col sm:flex-row w-screen items-center justify-evenly pt-10 sm:p-4"
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: easeInOut }}
-        className="flex flex-col sm:flex-row justify-evenly items-center pt-20"
+        className="flex flex-col sm:flex-row justify-evenly items-center "
       >
         <div className="  m-3 sm:hidden ">
           <img src={sideImg} alt="" className="p-2 " />
@@ -71,10 +77,10 @@ const Introduction = () => {
             </p>
           </motion.div>
           <motion.div
-           variants={fadeInUp}
+            variants={fadeInUp}
             whileHover={{
               scale: 1.1,
-              transition: { duration: 0.1, delay: 0, ease:easeOut },
+              transition: { duration: 0.1, delay: 0, ease: easeOut },
             }}
             className="text-base w-72 h-16 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150 cursor-pointer   "
             style={{
@@ -101,4 +107,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default Home;

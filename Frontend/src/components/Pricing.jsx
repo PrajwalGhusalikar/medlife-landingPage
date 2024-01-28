@@ -9,7 +9,7 @@ const Pricing = () => {
         style={{ color: "#302D7A" }}
       >
         <div className="w-80  p-4 flex flex-col items-center ">
-          <div className="">
+          <div className=" w-[168px] sm:w-auto">
             <h2 className="text-2xl font-bold mb-3 mt-0">
               <i className="fa-solid fa-play text-2xl"></i> Free Trial
             </h2>
@@ -27,13 +27,13 @@ const Pricing = () => {
                 Download Chat
               </p>
             </div>
-            <button className="p-2 text-lg  rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500   w-32 m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
+            <button className="p-2 w-40 text-lg  rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500  m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
               Start Now
             </button>
           </div>
         </div>
         <div className="w-80  p-4 pl-4 flex flex-col items-center">
-          <div className="">
+          <div className="w-[168px] sm:w-auto">
             <h2 className="text-2xl font-bold mb-3 mt-0">
               {" "}
               <i className="fa-solid fa-crown text-yellow-500"></i> Premium
@@ -52,13 +52,13 @@ const Pricing = () => {
                 Download Chat
               </p>
             </div>
-            <button className="p-2 text-lg w-40  rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500   m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
+            <button className="p-2  text-lg w-40  rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500   m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
               Comming Soon
             </button>
           </div>
         </div>
         <div className="w-80 p-4 flex flex-col items-center">
-          <div className=" mx-16 sm:mx-auto ">
+          <div className="w-[168px] sm:w-auto ">
             <h2 className="text-2xl font-bold mb-3 mt-0">
               <i className="fa-regular fa-building text-2xl"></i> Enterprise
             </h2>
@@ -76,7 +76,7 @@ const Pricing = () => {
                 API
               </p>
             </div>
-            <button className="p-2 text-lg  rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500   w-32 m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
+            <button className="p-2 text-lg w-40 rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-300 hover:from-pink-500 hover:to-yellow-500 m-2 ml-0 mt-3 shadow-custom shadow-custom transition ease-in-out  hover:scale-110   duration-150 hover:text-white hover:font-bold ">
               Start Now
             </button>
           </div>

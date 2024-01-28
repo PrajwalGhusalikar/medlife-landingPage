@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
-import { easeInOut, easeOut, motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const NavBar = () => {
   const [toggle, settoggle] = useState("");
@@ -27,7 +27,6 @@ const NavBar = () => {
         ease: easing,
       },
     },
-
     animate: {
       y: 0,
       opacity: 1,
@@ -40,7 +39,7 @@ const NavBar = () => {
 
   return (
     <motion.div initial="initial" animate="animate">
-      <motion.nav className="bg-white h-12 w-100% flex justify-between items-center p-2 fixed w-screen z-20">
+      <motion.nav className="bg-white h-12 w-screen flex justify-between items-center p-2 fixed  z-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

@@ -1,18 +1,24 @@
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Introduction from "./components/Introduction";
+import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing";
 import "./style.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Introduction />
-      <Features />
-      <Pricing />
-      <Footer/>
+      <Router>
+        {" "}
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+        </Routes>
+        <Features />
+        <Pricing />
+        <Footer />
+      </Router>
     </div>
   );
 }
