@@ -13,6 +13,7 @@ const Home = () => {
         ease: easing,
       },
     },
+
     animate: {
       y: 5,
       opacity: 1,
@@ -31,20 +32,18 @@ const Home = () => {
       },
     },
   };
-
   return (
     <motion.div
       variants={stagger}
       initial="initial"
       animate="animate"
       name="home"
-      className="h-screen flex flex-col sm:flex-row w-screen items-center justify-evenly pt-10 sm:p-4"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: easeInOut }}
-        className="flex flex-col sm:flex-row justify-evenly items-center "
+        className="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center pt-5  h-screen"
       >
         <div className="  m-3 sm:hidden ">
           <img src={sideImg} alt="" className="p-2 " />

@@ -57,7 +57,7 @@ const NavBar = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0, ease: easeOut },
           }}
-          className="w-40 text-start pl-2 text-2xl text text-slate-900 bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer  "
+          className="w-40 text-start pl-2 text-2xl text text-slate-900 bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer"
         >
           <img src={logo} alt="logo" className="h-5 w-5" />
           <Link to="home" spy={true} smooth={true} offset={-70} duration={500}>
@@ -154,7 +154,13 @@ const NavBar = () => {
         )}
 
         {toggle ? (
-          <div className="flex fixed top-0 left-0 right-0 flex-col justify-center items-center text-center bg-slate-900 opacity-85 h-screen z-10 ">
+          <div
+            className="flex text-blue-950 fixed top-0 left-0 right-0 flex-col justify-center items-center text-center opacity-85 h-screen z-10 "
+            style={{
+              background:
+                "linear-gradient(to bottom right, #64deb2 0%, #b1f9d8 100%)",
+            }}
+          >
             <Link
               to="home"
               spy={true}
@@ -164,7 +170,7 @@ const NavBar = () => {
               onClick={() => {
                 settoggle(false);
               }}
-              className="text-white text-4xl py-7  hover:scale-115 cursor-pointer rounded-2xl text-center hover:font-bold  hover:bg-slate-800 "
+              className=" text-4xl   py-7  hover:scale-115 cursor-pointer rounded-2xl text-center font-semi-bold  hover:bg-slate-800 "
             >
               Home
             </Link>
@@ -177,7 +183,7 @@ const NavBar = () => {
               onClick={() => {
                 settoggle(false);
               }}
-              className="text-white text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center hover:font-bold  hover:bg-slate-800 "
+              className=" text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center font-semi-bold  hover:bg-slate-800 "
             >
               Features
             </Link>
@@ -190,7 +196,7 @@ const NavBar = () => {
               onClick={() => {
                 settoggle(false);
               }}
-              className="text-white text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center hover:font-bold  hover:bg-slate-800 "
+              className=" text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center font-semi-bold  hover:bg-slate-800 "
             >
               Pricing
             </Link>

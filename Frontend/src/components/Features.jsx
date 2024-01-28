@@ -52,18 +52,19 @@ const Features = () => {
   };
 
   return (
-    <motion.div  name="features">
+    <motion.div name="features">
       <motion.div
         variants={fadeInUp}
         initial="initial"
         whileInView={"animate"}
-        viewport={{ once: false, amount: 0.7 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0"
       >
         Features
       </motion.div>
       <motion.div
-        variants={stagger} animate="animate"
+        variants={stagger}
+        animate="animate"
         className="sm:w-11/12 mx-auto my-8 mt-6 md:gap-3  grid sm:grid-cols-2 md:grid-cols-3 place-items-center"
       >
         <motion.div
