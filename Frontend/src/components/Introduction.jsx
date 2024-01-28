@@ -1,26 +1,37 @@
 import React from "react";
 import sideImg from "../assets/sideimage.png";
+import { easeIn, easeInOut, motion } from "framer-motion";
+
 const Introduction = () => {
   return (
     <div name="home">
-      <div className="flex flex-col sm:flex-row justify-evenly items-center pt-20">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: easeInOut }}
+        className="flex flex-col sm:flex-row justify-evenly items-center pt-20"
+      >
         <div className="  m-3 sm:hidden ">
           <img src={sideImg} alt="" className="p-2 " />
         </div>
         <div className="  w-screen sm:w-1/2 m-4 sm:mt-4 p-3 flex flex-col  items-center">
-          <div className="text-3xl sm:text-4xl text-center mb-2 sm:my-4 " style={{color:"#554869"}}>
+          <motion.div
+            initial={{opacity: 0, scale: 0 ,translateY:-20}} animate={{opacity: 1, scale: 1 ,translateY:0}}    transition={{ duration: 0.6, delay: 0.5, ease: easeInOut }}
+            className="text-3xl sm:text-4xl text-center mb-2 sm:my-4 "
+            style={{ color: "#554869" }}
+          >
             Your Medical Companion, Anytime, Anywhere...
-          </div>
+          </motion.div>
 
-          <div className="text-xl text-slate-500 my-2  text-center">
+          <motion.div initial={{opacity: 0.6 ,translateY:-20}} animate={{opacity: 1,translateY:0}}    transition={{ duration: 0.6, delay: 0.4, ease: easeInOut}} className="text-xl text-slate-500 my-2  text-center">
             <p className="">
               {" "}
               Revolutionizing healthcare through cutting-edge AI, tailored to
               provide you with accurate medical insights.
             </p>
-          </div>
-          <div
-
+          </motion.div>
+          <motion.div
+          initial={{opacity: 0 ,translateY:40}} animate={{opacity: 1,translateY:0}} transition={{duration:0.6,delay:0.8,  ease: easeIn }}
             className="text-base w-72 h-16 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150 cursor-pointer   "
             style={{
               background:
@@ -28,12 +39,12 @@ const Introduction = () => {
             }}
           >
             Choose Your Plan & Empower Your Health Journey
-          </div>
+          </motion.div>
         </div>
         <div className="  m-3 hidden sm:block h-[500] w-[500] ">
           <img src={sideImg} alt="" className="p-2 " />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
