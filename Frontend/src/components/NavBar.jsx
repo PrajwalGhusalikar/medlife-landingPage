@@ -57,7 +57,7 @@ const NavBar = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0, ease: easeOut },
           }}
-          className="w-40 text-start pl-2 text-2xl text text-slate-900 bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer"
+          className="w-40 text-start pl-2 text-2xl text text-slate-900 bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer font-inder"
         >
           <img src={logo} alt="logo" className="h-5 w-5" />
           <Link to="home" spy={true} smooth={true} offset={-70} duration={500}>
@@ -198,7 +198,7 @@ const NavBar = () => {
               }}
               className=" text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center font-semi-bold  hover:bg-slate-800 "
             >
-              Pricing
+             Our Plans
             </Link>
           </div>
         ) : (

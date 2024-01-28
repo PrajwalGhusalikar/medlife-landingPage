@@ -20,12 +20,14 @@ const Pricing = () => {
 
   return (
     <div name="pricing">
-      <div className="text-3xl text-center text-dlate-900 py-3">Our Plans</div>
+      <div className="text-3xl text-center text-dlate-900 py-5 font-inder ">
+        Our Plans
+      </div>
       <div
         className="container sm:w-[800px] bg-emerald-100 m-auto rounded-3xl flex flex-col sm:flex-row items-center justify-center shadow-custom"
         style={{ color: "#302D7A" }}
       >
-        <div className="w-80  p-4 flex flex-col items-center ">
+        <div className="w-80  p-4 flex flex-col items-center font-inder">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -56,7 +58,7 @@ const Pricing = () => {
             </button>
           </motion.div>
         </div>
-        <div className="w-80  p-4 pl-4 flex flex-col items-center">
+        <div className="w-80  p-4 pl-4 flex flex-col items-center font-inder">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -64,7 +66,6 @@ const Pricing = () => {
             whileHover={{ scale: 1.1 }}
             viewport={{ once: false, amount: 0.7 }}
             className=" w-[168px] sm:w-auto"
-           
           >
             <h2 className="text-2xl font-bold mb-3 mt-0">
               {" "}
@@ -89,7 +90,7 @@ const Pricing = () => {
             </button>
           </motion.div>
         </div>
-        <div className="w-80 p-4 flex flex-col items-center">
+        <div className="w-80 p-4 flex flex-col items-center font-inder">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -97,7 +98,6 @@ const Pricing = () => {
             whileHover={{ scale: 1.1 }}
             viewport={{ once: false, amount: 0.7 }}
             className=" w-[168px] sm:w-auto"
-           
           >
             <h2 className="text-2xl font-bold mb-3 mt-0">
               <i className="fa-regular fa-building text-2xl"></i> Enterprise

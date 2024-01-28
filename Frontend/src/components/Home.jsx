@@ -48,7 +48,7 @@ const Home = () => {
         <div className="  m-3 sm:hidden ">
           <img src={sideImg} alt="" className="p-2 " />
         </div>
-        <div className="  w-screen sm:w-1/2 m-4 sm:mt-4 p-3 flex flex-col  items-center">
+        <div className="  w-screen sm:w-1/2 m-4 sm:mt-4 p-3 flex flex-col  items-center font-inria">
           <motion.div
             initial={{ opacity: 0, scale: 0, translateY: -20 }}
             animate={{ opacity: 1, scale: 1, translateY: 0 }}

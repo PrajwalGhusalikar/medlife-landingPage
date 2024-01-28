@@ -58,14 +58,14 @@ const Features = () => {
         initial="initial"
         whileInView={"animate"}
         viewport={{ once: false, amount: 0.1 }}
-        className="w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0"
+        className="w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0 font-inder"
       >
-        Features
+        Features Highlights
       </motion.div>
       <motion.div
         variants={stagger}
         animate="animate"
-        className="sm:w-11/12 mx-auto my-8 mt-6 md:gap-3  grid sm:grid-cols-2 md:grid-cols-3 place-items-center"
+        className="sm:w-11/12 mx-auto my-8 mt-6 md:gap-3  grid sm:grid-cols-2 md:grid-cols-3 place-items-center font-inder"
       >
         <motion.div
           variants={fadeIn}
