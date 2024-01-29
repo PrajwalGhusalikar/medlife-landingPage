@@ -3,9 +3,25 @@ import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
 import { easeOut, motion } from "framer-motion";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [toggle, settoggle] = useState("");
   let ref = useRef();
+
+  let theme = props.theme;
+  let { setTheme } = props;
+
+  const themes = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    }
+    if (theme === "dark") {
+      setTheme("light");
+    }
+  };
+
+  document.body.style.backgroundColor = `  ${
+    theme === "dark" ? "#19376D" : "white"
+  } `;
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const stagger = {
@@ -39,7 +55,9 @@ const NavBar = () => {
 
   return (
     <motion.div initial="initial" animate="animate">
-      <motion.nav className="bg-white h-12 w-screen flex justify-between items-center p-2 fixed  z-20">
+      <motion.nav
+        className={`bg-white h-12 w-screen flex justify-between items-center p-2 fixed bg-color-${theme} text-color-${theme} z-20`}
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +75,9 @@ const NavBar = () => {
             scale: 1.1,
             transition: { duration: 0.1, delay: 0, ease: easeOut },
           }}
-          className="w-40 text-start pl-2 text-2xl text text-slate-900 bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer font-inder"
+          className={`w-40 text-start pl-2 text-2xl text ${
+            theme === "dark" ? "text-white" : "text-slate-900"
+          } bold flex  shadow-custom transition ease-in-out  hover:scale-110   duration-150 cursor-pointer font-inder`}
         >
           <img src={logo} alt="logo" className="h-5 w-5" />
           <Link to="home" spy={true} smooth={true} offset={-70} duration={500}>
@@ -74,7 +94,9 @@ const NavBar = () => {
             onClick={() => {
               settoggle(false);
             }}
-            className="w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100  transition ease-in-out  hover:scale-110   duration-150 text-lg "
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
+              theme === "light" ? "text-black" : "text-red-800"
+            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="home"
@@ -92,7 +114,9 @@ const NavBar = () => {
             onClick={() => {
               settoggle(false);
             }}
-            className="w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100  transition ease-in-out  hover:scale-110   duration-150 text-lg "
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
+              theme === "light" ? "text-black" : "text-red-800"
+            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="features"
@@ -110,7 +134,9 @@ const NavBar = () => {
             onClick={() => {
               settoggle(false);
             }}
-            className="w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100  transition ease-in-out  hover:scale-110   duration-150 text-lg "
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
+              theme === "light" ? "text-black" : "text-red-800"
+            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="pricing"
@@ -123,15 +149,26 @@ const NavBar = () => {
             </Link>
           </motion.div>
         </motion.div>
-        <motion.div
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          whileHover={{ scale: 1.1 }}
-          className="w-32 text-end sm:pr-4 text-lg text-slate-900 bold shadow-custom transition ease-in-out  hover:scale-110 cursor-pointer   duration-150"
-        >
-          <i className="fa-solid fa-user "></i> sign in
-        </motion.div>
+        <div className="flex items-center justify-center sm:mr-4">
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            whileHover={{ scale: 1.1 }}
+            className={`w-32 text-end sm:pr-3 text-lg  ${
+              theme === "dark" ? "text-white" : "text-slate-900"
+            }  bold shadow-custom transition ease-in-out  hover:scale-110 cursor-pointer   duration-150`}
+          >
+            <i className="fa-solid fa-user "></i> sign in
+          </motion.div>
+          <span>
+            {" "}
+            {/* theme button */}
+            <button className={`text-color-${theme}} p-3`} onClick={() => themes()}>
+              <i className="fa-solid fa-sun "></i>
+            </button>
+          </span>
+        </div>
 
         {toggle ? (
           <div
@@ -198,7 +235,7 @@ const NavBar = () => {
               }}
               className=" text-4xl py-7 hover:scale-115 cursor-pointer rounded-2xl text-center font-semi-bold  hover:bg-slate-800 "
             >
-             Our Plans
+              Our Plans
             </Link>
           </div>
         ) : (

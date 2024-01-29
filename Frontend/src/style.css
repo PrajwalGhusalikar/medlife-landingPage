@@ -633,11 +633,25 @@ video {
   box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.5); /* Adjust the alpha value for a darker shadow */
 }
 
-.font-inder{
-  font-family: 'Inder', sans-serif;
+.font-inder {
+  font-family: "Inder", sans-serif;
 }
 
-.font-inria{
-  font-family: 'Inria Sans', sans-serif;
+.font-inria {
+  font-family: "Inria Sans", sans-serif;
 }
 
+.text-color-light {
+  color: black;  
+}
+.text-color-dark {
+color: white;
+}
+
+.bg-color-light {
+  background-color: whitesmoke;
+}
+
+.bg-color-dark {
+  background-color: #0b2447;
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Pricing = () => {
+const Pricing = (props) => {
+
+  let {theme}= props
+
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeIn = {
     hidden: { opacity: 0, y: -20 },
@@ -20,7 +23,7 @@ const Pricing = () => {
 
   return (
     <div name="pricing">
-      <div className="text-3xl text-center text-dlate-900 py-5 font-inder ">
+      <div        className={`w-screen text-center text-3xl py-4 font-inder text-${(theme==="dark"?"white":"black")}`}>
         Our Plans
       </div>
       <div

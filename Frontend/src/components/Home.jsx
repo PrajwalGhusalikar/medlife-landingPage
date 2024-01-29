@@ -2,7 +2,10 @@ import React from "react";
 import sideImg from "../assets/sideimage.png";
 import { easeInOut, easeOut, motion } from "framer-motion";
 import { Link } from "react-scroll";
-const Home = () => {
+const Home = (props) => {
+
+  let {theme}= props
+
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeInUp = {
     initial: {
@@ -53,8 +56,8 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0, translateY: -20 }}
             animate={{ opacity: 1, scale: 1, translateY: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: easeInOut }}
-            className="text-3xl sm:text-4xl text-center mb-2 sm:my-4 "
-            style={{ color: "#554869" }}
+            className={`text-3xl sm:text-4xl text-center mb-2 sm:my-4 text-${(theme==="dark")?"white": "gray-600"} `}
+
           >
             Your Medical Companion, Anytime, Anywhere...
           </motion.div>

@@ -6,7 +6,10 @@ import security from "../assets/security.svg";
 import uiux from "../assets/uiux.svg";
 import { motion } from "framer-motion";
 
-const Features = () => {
+const Features = (props) => {
+
+  let {theme}= props
+
   const easing = [0.6, -0.05, 0.01, 0.99];
   const stagger = {
     animate: {
@@ -58,7 +61,7 @@ const Features = () => {
         initial="initial"
         whileInView={"animate"}
         viewport={{ once: false, amount: 0.1 }}
-        className="w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0 font-inder"
+        className={`w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0 font-inder text-${(theme==="dark"?"white":"black")}`}
       >
         Features Highlights
       </motion.div>
