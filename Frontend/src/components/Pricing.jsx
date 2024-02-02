@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Pricing = (props) => {
-
-  let {theme}= props
+  let { theme } = props;
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeIn = {
@@ -20,12 +19,38 @@ const Pricing = (props) => {
       },
     },
   };
+  const fadeInUp = {
+    initial: {
+      y: -60,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: easing,
+      },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: easing,
+      },
+    },
+  };
 
   return (
     <div name="pricing">
-      <div        className={`w-screen text-center text-3xl py-4 font-inder text-${(theme==="dark"?"white":"black")}`}>
+      <motion.div
+        variants={fadeInUp}
+        initial="initial"
+        whileInView={"animate"}
+        viewport={{ once: false, amount: 0.7 }}
+        className={`w-screen text-center text-3xl py-8 font-inder text-${
+          theme === "dark" ? "white" : "black"
+        }`}
+      >
         Our Plans
-      </div>
+      </motion.div>
       <div
         className="container sm:w-[800px] bg-emerald-100 m-auto rounded-3xl flex flex-col sm:flex-row items-center justify-center shadow-custom"
         style={{ color: "#302D7A" }}

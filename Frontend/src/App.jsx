@@ -8,8 +8,6 @@ import "./style.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
-  
   let [theme, setTheme] = useState("light");
 
   return (
@@ -21,7 +19,7 @@ function App() {
           <Route path="/" element={<Home theme={theme} />}></Route>
         </Routes>
         <Features theme={theme} />
-        <Pricing  theme={theme}/>
+        <Pricing theme={theme} />
         <Footer />
       </Router>
     </div>

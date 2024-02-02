@@ -7,8 +7,7 @@ import uiux from "../assets/uiux.svg";
 import { motion } from "framer-motion";
 
 const Features = (props) => {
-
-  let {theme}= props
+  let { theme } = props;
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const stagger = {
@@ -16,7 +15,7 @@ const Features = (props) => {
       transition: {
         delayChildren: 0.8,
         staggerChildren: 0.4,
-        staggerDirection: 2,
+        staggerDirection: 1,
       },
     },
   };
@@ -61,7 +60,9 @@ const Features = (props) => {
         initial="initial"
         whileInView={"animate"}
         viewport={{ once: false, amount: 0.1 }}
-        className={`w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0 font-inder text-${(theme==="dark"?"white":"black")}`}
+        className={`w-screen text-center text-3xl py-1 pb-0 sm:my-8 mb-0 font-inder text-${
+          theme === "dark" ? "white" : "black"
+        }`}
       >
         Features Highlights
       </motion.div>

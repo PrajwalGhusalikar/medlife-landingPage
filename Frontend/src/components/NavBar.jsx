@@ -94,9 +94,7 @@ const NavBar = (props) => {
             onClick={() => {
               settoggle(false);
             }}
-            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
-              theme === "light" ? "text-black" : "text-red-800"
-            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100  text-color-hover transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="home"
@@ -114,9 +112,7 @@ const NavBar = (props) => {
             onClick={() => {
               settoggle(false);
             }}
-            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
-              theme === "light" ? "text-black" : "text-red-800"
-            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 text-color-hover transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="features"
@@ -134,9 +130,7 @@ const NavBar = (props) => {
             onClick={() => {
               settoggle(false);
             }}
-            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100 hover:${
-              theme === "light" ? "text-black" : "text-red-800"
-            } transition ease-in-out  hover:scale-110   duration-150 text-lg `}
+            className={`w-24 text-center cursor-pointer rounded-2xl p-2 hover:bg-emerald-100  text-color-hover  transition ease-in-out  hover:scale-110   duration-150 text-lg `}
           >
             <Link
               to="pricing"
@@ -164,8 +158,15 @@ const NavBar = (props) => {
           <span>
             {" "}
             {/* theme button */}
-            <button className={`text-color-${theme}} p-3`} onClick={() => themes()}>
-              <i className="fa-solid fa-sun "></i>
+            <button
+              className={`text-color-${theme} p-3`}
+              onClick={() => themes()}
+            >
+              {theme === "light" ? (
+                <i className="fa-solid fa-moon "></i>
+              ) : (
+                <i className="fa-solid fa-sun text-yellow-300 "></i>
+              )}
             </button>
           </span>
         </div>

@@ -3,8 +3,7 @@ import sideImg from "../assets/sideimage.png";
 import { easeInOut, easeOut, motion } from "framer-motion";
 import { Link } from "react-scroll";
 const Home = (props) => {
-
-  let {theme}= props
+  let { theme } = props;
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeInUp = {
@@ -56,8 +55,9 @@ const Home = (props) => {
             initial={{ opacity: 0, scale: 0, translateY: -20 }}
             animate={{ opacity: 1, scale: 1, translateY: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: easeInOut }}
-            className={`text-3xl sm:text-4xl text-center mb-2 sm:my-4 text-${(theme==="dark")?"white": "gray-600"} `}
-
+            className={`text-3xl sm:text-4xl text-center mb-2 sm:my-4 text-${
+              theme === "dark" ? "white" : "gray-600"
+            } `}
           >
             Your Medical Companion, Anytime, Anywhere...
           </motion.div>
@@ -84,7 +84,7 @@ const Home = (props) => {
               scale: 1.1,
               transition: { duration: 0.1, delay: 0, ease: easeOut },
             }}
-            className="text-base w-72 h-16 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150 cursor-pointer   "
+            className="text-base w-72 h-16 rounded-2xl text-center m-auto mt-4 p-2  shadow-custom transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-emerald-100  duration-150 cursor-pointer text-color-hover  "
             style={{
               background:
                 "linear-gradient(to bottom right, #64deb2 0%, #b1f9d8 100%)",

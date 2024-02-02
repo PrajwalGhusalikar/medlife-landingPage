@@ -642,10 +642,15 @@ video {
 }
 
 .text-color-light {
-  color: black;  
+  color: black;
 }
+
 .text-color-dark {
-color: white;
+  color: white;
+}
+
+.text-color-hover:hover {
+  color: red;
 }
 
 .bg-color-light {
