@@ -14,49 +14,57 @@ const Footer = () => {
         </div>
         <div className="sm:w-[900] grid grid-cols-4 sm:mx-5 text-start font-inder">
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Pre-sale FAQ’s
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Services
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             About Us
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm  text-white mx-2 sm:w-28 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Submit a Ticket
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Support
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Contact
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Affiliates
           </a>
           <a
-            href="/" target="_blank"
+            href="/"
+            target="_blank"
             className="text-sm text-white mx-2 p-1 hover:cursor-pointer hover:underline hover:font-semibold"
           >
             Resources

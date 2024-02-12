@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
 import { easeOut, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = (props) => {
   const [toggle, settoggle] = useState("");
@@ -20,7 +21,7 @@ const NavBar = (props) => {
   };
 
   document.body.style.backgroundColor = `  ${
-    theme === "dark" ? "#19376D" : "white"
+    theme === "dark" ? "#435B66" : "white"
   } `;
 
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -52,7 +53,11 @@ const NavBar = (props) => {
       },
     },
   };
-
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/signin");
+  };
   return (
     <motion.div initial="initial" animate="animate">
       <motion.nav
@@ -152,8 +157,9 @@ const NavBar = (props) => {
             className={`w-32 text-end sm:pr-3 text-lg  ${
               theme === "dark" ? "text-white" : "text-slate-900"
             }  bold shadow-custom transition ease-in-out  hover:scale-110 cursor-pointer   duration-150`}
+            onClick={handleLogout}
           >
-            <i className="fa-solid fa-user "></i> sign in
+            <i className="fa-solid fa-user "></i> Logout
           </motion.div>
           <span>
             {" "}

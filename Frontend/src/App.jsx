@@ -6,6 +6,9 @@ import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing";
 import "./style.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Chatbot from "./Pages/Chat";
+import Signin from "./Pages/Signin";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 function App() {
   let [theme, setTheme] = useState("light");
@@ -14,13 +17,63 @@ function App() {
     <div className="App">
       <Router>
         {" "}
-        <NavBar setTheme={setTheme} theme={theme} />
         <Routes>
-          <Route path="/" element={<Home theme={theme} />}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                {" "}
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <Home theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <Features theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <NavBar setTheme={setTheme} theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  <Pricing theme={theme} />{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  <Chatbot/>{" "}
+                </PrivateRoute>
+                <PrivateRoute>
+                  {" "}
+                  <Footer />{" "}
+                </PrivateRoute>
+              </>
+            }
+          ></Route>
+          <Route path="/signin" element={<Signin />} />
         </Routes>
-        <Features theme={theme} />
-        <Pricing theme={theme} />
-        <Footer />
       </Router>
     </div>
   );
